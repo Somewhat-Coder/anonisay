@@ -15,6 +15,12 @@ export async function middleware(request: NextRequest) {
   ) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
+
+  if(!token && request.nextUrl.pathname.startsWith("/dashboard")){
+    return NextResponse.redirect(new URL("/sign-in", request.url));
+  }
+
+  return NextResponse.next();
 }
 
 // See "Matching Paths" below to learn more
