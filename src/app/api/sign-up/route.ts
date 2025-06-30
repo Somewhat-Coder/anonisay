@@ -93,11 +93,11 @@ export async function POST(request: Request) {
 
     return Response.json(
       {
-        success: false,
+        success: true,
         message: "User registered successfully. Please verify your account.",
       },
       {
-        status: 500,
+        status: 200,
       }
     );
   } catch (error) {

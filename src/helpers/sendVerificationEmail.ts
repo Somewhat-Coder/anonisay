@@ -19,7 +19,7 @@ export async function sendVerificationEmail(
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: email,
-      subject: "Anonisay account verification",
+      subject: "Anonisay Account Verification 🤝",
       react: VerificationEmail({
         username,
         otp: verifyCode,

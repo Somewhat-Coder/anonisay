@@ -1,3 +1,4 @@
+import VerificationEmailProps from '@/types/Email';
 import {
     Html,
     Head,
@@ -10,23 +11,20 @@ import {
     Button
 } from '@react-email/components';
 
-interface VerificationEmailProps {
-    username: string;
-    otp: string;
-}
+
 
 export default function VerificationEmail({ username, otp }: VerificationEmailProps) {
     return (
-        <Html>
+        <Html className=''>
             <Head />
-            <Preview>Verify your email address</Preview>
+            <Preview>Verify your Anonisay account email</Preview>
             <Section style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
                 <Heading style={{ textAlign: 'center', color: '#333' }}>
                     Email Verification
                 </Heading>
                 <Row>
-                    <Text style={{ marginTop: '20px', color: '#555' }}>
-                        Hi {username},
+                    <Text style={{ marginTop: '20px', color: '#555', fontSize: '16px' }}>
+                        Hi {username}!,
                     </Text>
                 </Row>
                 <Row>
@@ -35,7 +33,7 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
                     </Text>
                 </Row>
                 <Row>
-                    <Text style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+                    <Text style={{ fontSize: '24px', fontWeight: 'bold', color: '#333', textAlign: 'center' }}>
                         {otp}
                     </Text>
                 </Row>
