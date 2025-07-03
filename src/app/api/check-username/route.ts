@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
 
-    const queryParams = {
+    const queryParams = { 
       username: searchParams.get("username"),
     };
 
